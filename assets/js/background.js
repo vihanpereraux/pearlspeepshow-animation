@@ -1,6 +1,4 @@
-var slider01 = "https://i.ibb.co/5xFY6v3/Slider03.jpg"; 
-var slider02 = "https://i.ibb.co/Z6JL1bG/Slider02.jpg";
-var slider03 = "https://i.ibb.co/NjWK50M/Slider01.jpg";
+var slider01 = "https://i.ibb.co/Ns3bCfg/backdrop.jpg"; 
 
 
 const images = [slider01];

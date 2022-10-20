@@ -10,7 +10,7 @@ body{
     height: 100vh;
     overflow-x: hidden !important;
     overflow-y: hidden !important;
-    /* cursor: none; */
+    cursor: none;
 }
 
 
@@ -19,21 +19,21 @@ body{
     position: fixed;
     width: 100%;
     height: 100vh;
-    /* background: url(../img/bg.jpeg); */
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.2s;
-    clip-path: circle(75px at var(--x) var(--y));
+    transition: 0.3s linear;
     z-index: 1 !important;
+    animation: checking 2s ease-in-out;
+    clip-path: circle(140px at var(--x) var(--y));
 }
-
-
-
-@media screen and (min-width: 53em) {
-    .slider {
-        height: 100vh;
+@keyframes checking{
+    0%{
+        clip-path: circle(10px at var(--x) var(--y));
+    }
+    100%{
+        clip-path: circle(140px at var(--x) var(--y));
     }
 }
 .rgbKineticSlider {
@@ -48,12 +48,6 @@ body{
     display: block;
     top: 0;
     left: 0;
-}
-@media screen and (max-width: 53em) {
-    nav a {
-        top: auto;
-        bottom: 3rem;
-    }
 }
 /* end of clipped background stylings */
 
@@ -95,7 +89,7 @@ body{
     font-family: "roc grotesk wide";
     font-size: 0px;
 }
-#main-title-wrapper #coming-soon-text{
+#main-title-wrapper{
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
@@ -108,6 +102,7 @@ body{
     -webkit-text-stroke-width: 0.2px;
     text-align: center;
     width: 100%;
+    z-index: 3;
 }
 /* end of blotter text styles */
 
@@ -133,7 +128,14 @@ body{
 .bottom-row #middle-text{
     color: white;
     text-align: center !important;
-    cursor: default !important;
+    cursor: none !important;
+    -webkit-text-stroke-color: white !important;
+    -webkit-text-stroke-width: .2px;
+}
+.bottom-row #middle-text a{
+    cursor: none !important;
+    text-decoration: none;
+    color: white !important;
 }
 .bottom-row #right-text{
     color: white;
@@ -143,7 +145,7 @@ body{
 /* end of bottom row stylings */
 
 
-/*  */
+/* first video bg stylings */
 #video01{
     position: fixed;
     top: 50%;
@@ -154,8 +156,39 @@ body{
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
-    /* background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat; */
     background-size: cover;
     transition: 1s opacity;
 }
-/*  */
+#video-shader{
+    position: absolute;
+    width: 100vw;
+    opacity: .6;
+    height: 100vh;
+    background-color: black;
+    z-index: -1;
+}
+/* end of first video bg stylings */
+
+
+/* stylings for the cursor */
+.inner-cursor{
+    position: fixed;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: white !important;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: 0.2s; 
+    width: 0px; 
+    height: 0px;
+    z-index: 3;
+}
+
+.inner-cursor.grow{
+    width: 55px;
+    height: 55px;
+    transition: width 1s, height 1s;
+    background-color: orangered !important;
+}
+/* end of stylings for the cursor */

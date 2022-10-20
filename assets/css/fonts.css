@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/hre7bsv.css");
+
 @font-face {
     font-family: Formula-Serial-Regular;
     src: url(../fonts/Formula-Serial-Regular.ttf);
@@ -5,5 +7,10 @@
 
 @font-face {
     font-family: roc-grotesk-wide;
+    src: url(../fonts/roc-grotesk-wide.ttf);
+}
+
+@font-face {
+    font-family: "roc grotesk wide";
     src: url(../fonts/roc-grotesk-wide.ttf);
 }

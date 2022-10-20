@@ -10,7 +10,7 @@ body{
     height: 100vh;
     overflow-x: hidden !important;
     overflow-y: hidden !important;
-    cursor: none;
+    /* cursor: none; */
 }
 
 
@@ -26,6 +26,7 @@ body{
     align-items: center;
     transition: 0.2s;
     clip-path: circle(75px at var(--x) var(--y));
+    z-index: 1 !important;
 }
 /* end of clipped background stylings */
 
@@ -73,6 +74,8 @@ body{
     font-size: 50px;
     -webkit-text-stroke-color: white;
     -webkit-text-stroke-width: 0.2px;
+    text-align: center;
+    width: 100%;
 }
 /* end of blotter text styles */
 
@@ -88,6 +91,7 @@ body{
     padding-right: 40px;
     font-family: var(--description-font);
     text-transform: uppercase;
+    z-index: 1 !important;
 }
 .bottom-row #left-text{
     color: white;
@@ -97,6 +101,7 @@ body{
 .bottom-row #middle-text{
     color: white;
     text-align: center !important;
+    cursor: default !important;
 }
 .bottom-row #right-text{
     color: white;
@@ -105,3 +110,20 @@ body{
 }
 /* end of bottom row stylings */
 
+
+/*  */
+#video01{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+/*  */

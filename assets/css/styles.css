@@ -1,6 +1,11 @@
+:root{
+    --description-font: Formula-Serial-Regular;
+    --title-font: roc-grotesk-wide;
+}
+
+
 body{
     background-color: black !important;
-    margin: 0;
     width: 100vw;
     height: 100vh;
     overflow-x: hidden !important;
@@ -8,14 +13,8 @@ body{
     cursor: none;
 }
 
-h3{
-    color: white;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-}
 
+/* clipped background stylings */
 #background{
     position: fixed;
     width: 100%;
@@ -28,3 +27,81 @@ h3{
     transition: 0.2s;
     clip-path: circle(75px at var(--x) var(--y));
 }
+/* end of clipped background stylings */
+
+
+/* upper row stylings */
+.upper-row{
+    position: absolute;
+    width: 100%;
+    transform: translate(-50%);
+    left: 51%;
+    top: 4%;
+    color: white;
+    padding-left: 25px;
+    padding-right: 40px;
+    font-family: var(--description-font);
+    text-transform: uppercase;
+}
+.upper-row #left-text{
+    width: 65%;
+    text-align: left;
+    line-height: 1.5;
+}
+.left-col{
+    position: relative !important;
+}
+.upper-row #right-text{
+    position: absolute;
+    width: 60%;
+    right: 0;
+    text-align: right;
+    line-height: 1.5;
+}
+/* end of upper row stylings */
+
+
+/* blotter text styles */
+#main-title-wrapper h1{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    font-family: var(--title-font) !important;
+    color: white;
+    text-transform: uppercase;
+    font-size: 50px;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.2px;
+}
+/* end of blotter text styles */
+
+
+/* bottom row stylings */
+.bottom-row{
+    position: absolute;
+    width: 100%;
+    transform: translate(-50%);
+    left: 50%;
+    bottom: 4%;
+    padding-left: 25px !important;
+    padding-right: 40px;
+    font-family: var(--description-font);
+    text-transform: uppercase;
+}
+.bottom-row #left-text{
+    color: white;
+    text-align: left !important;
+    margin-left: 20px;
+}
+.bottom-row #middle-text{
+    color: white;
+    text-align: center !important;
+}
+.bottom-row #right-text{
+    color: white;
+    text-align: right !important;
+    margin-right: -20px;
+}
+/* end of bottom row stylings */
+

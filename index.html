@@ -14,7 +14,18 @@
     <script src="assets/js/blotter.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/rollingDistortMaterial.min.js"></script>
     <script src="https://rawgit.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
+
+    <!-- importing tweenMax -->
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
+
+    <!-- importing pixi js -->
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js"></script>
     
+    <!-- importing slider plugin -->
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script>
+
     <style>
         @import url("https://use.typekit.net/hre7bsv.css");
     </style>
@@ -25,7 +36,9 @@
 </head>
 <body>
     <!-- video background -->
-    <div id="background"></div>
+    <div id="background">
+        <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+    </div>
     
     <div class="containerZ">
         <!-- upper row -->
@@ -66,12 +79,16 @@
         </video>
     </div>
 
-    <!-- <div id="paa">opoopoopp</div> -->
-    
+    <!-- <nav class="ggg">
+        <a href="#" class="main-nav prev" data-nav="previous">⟵ Prev</a>
+        <a href="#" class="main-nav next" data-nav="next">Next ➙<span></span><span></span></a>
+    </nav>
+     -->
     <!-- bootstrap v5.2 js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- script js -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/background.js"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@ body{
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: url(../img/bg.jpeg);
+    /* background: url(../img/bg.jpeg); */
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -27,6 +27,33 @@ body{
     transition: 0.2s;
     clip-path: circle(75px at var(--x) var(--y));
     z-index: 1 !important;
+}
+
+
+
+@media screen and (min-width: 53em) {
+    .slider {
+        height: 100vh;
+    }
+}
+.rgbKineticSlider {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+#rgbKineticSlider canvas {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+@media screen and (max-width: 53em) {
+    nav a {
+        top: auto;
+        bottom: 3rem;
+    }
 }
 /* end of clipped background stylings */
 
